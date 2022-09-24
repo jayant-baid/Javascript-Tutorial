@@ -402,7 +402,8 @@ const ul = document.querySelector('.items');<br>
 ul.firstElementChild.textContent = 'Hello';<br>
 ul.children[1].innerText = 'Brad';<br>  
 //Index=1 for second child
-ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; //<h1>...  <br>
+ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; <!-- <h1>Hello</h1> --> <br>
+
 //last child me hume html me changes karne h and woh changes h to print Hello in h1 size.
 IF WE WANT TO ADD HTML DYNAMICALLY, WE CAN DO IT WITH innerHTML
 
@@ -432,7 +433,7 @@ btn.addEventListener('click', e => { <br>
     //when we get this id, just change bg<br><br>
     document.querySelector('body').classList.add('bg-dark');<br>
     //we have write css for bg-dark, and this when we click on button, it adds class bg-dark in body, hence changes color<br><br>
-    ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; <br>
+    ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; <!-- <h1>Hello</h1> --> <br>
     //when we click, item3 changes to hello of h1 size<br>
 });<br><br>
 **Instead of Click, we also have 1: Mouseover, 2: Mouseout**<br>
