@@ -1,85 +1,84 @@
 # JavaScript Crash Course For Beginners
 
 ## VARIABLES
-var: not to use globally scoped
-let: we can reassign values
-const: Not to reassign
+var: not to use globally scoped <br/>
+let: we can reassign values <br/>
+const: Not to reassign <br/>
 
 ALWAYS USE CONST INSTEAD OF LET, WHEN WE KNOW WE ARE NOT GOING TO CHANGE IT'S VALUE. IT MAKE OUR CODE MORE ROBUST, MORE SECURE  
 
 ---
 
 ## DATATYPES
-string
-numbers
-boolean
-null
-undefined
- symbol: it's not so common
+string<br/>
+numbers<br/>
+boolean<br/>
+null<br/>
+undefined<br/>
+ symbol: it's not so common<br/>
 
-
-const name = "Jayant";
-const age = 19;  //it is a number not int
-const rating = 4.5; //it is a number not decimal/float
-const istrue = false;
-const x = null;
-// UNDEFINED
-const y = undefined; //explicitly undefined
-let z;
+const name = "Jayant";<br/>
+const age = 19;  //it is a number not int<br/>
+const rating = 4.5; //it is a number not decimal/float<br/>
+const istrue = false;<br/>
+const x = null;<br/>
+// UNDEFINED<br/>
+const y = undefined; //explicitly undefined<br/>
+let z;<br/>
 
 ---
 
 ## TYPEOF
-console.log(typeof name);   //string
-console.log(typeof age);   //number
-console.log(typeof rating);   //number
-console.log(typeof istrue);   //boolean
-console.log(typeof x);   //object : kind of error, hard to explain its not really an object it's null
-console.log(typeof y);   //undefined
+console.log(typeof name);   //string<br/>
+console.log(typeof age);   //number<br/>
+console.log(typeof rating);   //number<br/>
+console.log(typeof istrue);   //boolean<br/>
+console.log(typeof x);   //object : kind of error, hard to explain its not really an object it's null<br/>
+console.log(typeof y);   //undefined<br/>
 
 ---
 
 ## STRINGS
-const name1 = "Jayant";
-const age1 = 19;
+const name1 = "Jayant";<br/>
+const age1 = 19;<br/>
 #### Concatenation
-console.log("My name is " + name1 + " and age is " + age1); // IT is very irritating
+console.log("My name is " + name1 + " and age is " + age1); // IT is very irritating<br/>
 #### Template Strings
-console.log(`My name is ${name1} and age is ${age1}`);
+console.log(`My name is ${name1} and age is ${age1}`);<br/>
 #### or BEST WAY TO WRITE
-const hello = `My name is ${name1} and age is ${age1}`;
-console.log(hello);
+const hello = `My name is ${name1} and age is ${age1}`;<br/>
+console.log(hello);<br/>
 
 ## STRINGS PROPERTIES
-const s = "Hello Jayant";
-console.log(s.length);  //length of string
-console.log(s.toUpperCase()); //make all upercase, similar for lowercase 
-console.log(s.substring(0, 4)); //starting , ending of substring
+const s = "Hello Jayant";<br/>
+console.log(s.length);  //length of string<br/>
+console.log(s.toUpperCase()); //make all upercase, similar for lowercase <br/>
+console.log(s.substring(0, 4)); //starting , ending of substring<br/>
 
 #### Split string into array
-console.log(s.split(""));  //split fully in one characters
-/* OUTPUT: [
-  'H', 'e', 'l', 'l',
-  'o', ' ', 'J', 'a',
-  'y', 'a', 'n', 't'
-]
+console.log(s.split(""));  //split fully in one characters<br/>
+/* OUTPUT: [<br/>
+  'H', 'e', 'l', 'l',<br/>
+  'o', ' ', 'J', 'a',<br/>
+  'y', 'a', 'n', 't'<br/>
+]<br/>
 */
 
-console.log(s.split("o"));   //slipts when we encounter o
-/* OUTPUT: [ 'Hell', ' Jayant' ]
+console.log(s.split("o"));   //slipts when we encounter o<br/>
+/* OUTPUT: [ 'Hell', ' Jayant' ]<br/>
 */
 
 ---
 
 ## ARRAYS 
-const numbers = new Array(1, 4, 6, 5);  //constructor
-console.log(numbers);
+const numbers = new Array(1, 4, 6, 5);  //constructor<br/>
+console.log(numbers);<br/>
 #### or BEST WAY TO WRITE
-const num = [1, 3, 56, 7];
+const num = [1, 3, 56, 7];<br/>
 
-const fruits = ["apple", "oranges", "mango"];
-fruits[3] = "pears";
-// We can add in array, inspite of being const BUT, we can't write : fruits = [4, 6, 36]
+const fruits = ["apple", "oranges", "mango"];<br/>
+fruits[3] = "pears";<br/>
+// We can add in array, inspite of being const BUT, we can't write : fruits = [4, 6, 36]<br/>
 
 #### We can use PUSH to push values at the end
 fruits.push("Guvava");
@@ -91,11 +90,11 @@ fruits.pop();
 #### Get index of particular item
 console.log(fruits.indexOf("oranges"));
 
-console.log(num);
+console.log(num);<br/>
 console.log(fruits);
 
-// in JAVASCRIPT, we can add diff datatype values in a same array
-const values = ["apple", "oranges", "mango", 1, 3, 56, true];
+// in JAVASCRIPT, we can add diff datatype values in a same array<br/>
+const values = ["apple", "oranges", "mango", 1, 3, 56, true];<br/>
 console.log(values);
 
 console.log(fruits[1]);
@@ -103,53 +102,53 @@ console.log(fruits[1]);
 ---
 
 ## OBJECT LITERALS: are basically key value pairs
-const person = {
-    firstName: "Jayant",
-    lastName: "Baid",
-    age: 19,
-    hobbies: ["Watching Movies", "Making Videos"],
-    address: {
-        street: "xyz main street",
-        city: "New Delhi",
-        state: "Delhi",
-        country: "India"
-    }
+const person = {<br/>
+    firstName: "Jayant",<br/>
+    lastName: "Baid",<br/>
+    age: 19,<br/>
+    hobbies: ["Watching Movies", "Making Videos"],<br/>
+    address: {<br/>
+        street: "xyz main street",<br/>
+        city: "New Delhi",<br/>
+        state: "Delhi",<br/>
+        country: "India"<br/>
+    }<br/>
 }
 
-console.log(person); //show all details
-console.log(person.firstName); //show firstName
+console.log(person); //show all details<br/>
+console.log(person.firstName); //show firstName<br/>
 console.log(person.firstName, person.lastName); //show firstName lastName
 
 ## Create Variables we want these as Actual Variables --ADVANCED
-const { firstName, lastName, address: { city } } = person;
+const { firstName, lastName, address: { city } } = person;<br/>
 console.log(firstName, lastName, city); //OUTPUT: Jayant Baid New Delhi
 
 ### ADD PROPERTIES in person
-person.email = "baidjayant2002@gmail.com";
+person.email = "baidjayant2002@gmail.com";<br/>
 console.log(person);
 
 ---
 
 ## OBJECTS IN ARRAYS
-const todos = [
-    {
-        id: 1,
-        text: "Take Break",
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: "Study Web Dev",
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: "Watching Movie",
-        isCompleted: false
-    },
+const todos = [<br/>
+    {<br/>
+        id: 1,<br/>
+        text: "Take Break",<br/>
+        isCompleted: true<br/>
+    },<br/>
+    {<br/>
+        id: 2,<br/>
+        text: "Study Web Dev",<br/>
+        isCompleted: true<br/>
+    },<br/>
+    {<br/>
+        id: 3,<br/>
+        text: "Watching Movie",<br/>
+        isCompleted: false<br/>
+    },<br/>
 ];
 
-console.log(todos);
+console.log(todos);<br/>
 console.log(todos[1].text);
 
 ---
@@ -158,13 +157,13 @@ console.log(todos[1].text);
 
  It is a data format, when using API, when we're sending data to a server, usually send it in JSON format & receive in JSON Format 
 
-Double Quotes around keys and string, means 
-        "id": 1,
-        "text": "Take Break",
+Double Quotes around keys and string, means <br/>
+        "id": 1,<br/>
+        "text": "Take Break",<br/>
         "isCompleted": true
 
 #### Either we write OBJECTS like this, OR
-const todoJSON = JSON.stringify(todos);
+const todoJSON = JSON.stringify(todos);<br/>
 // stringify: Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 console.log(todoJSON);
@@ -172,26 +171,26 @@ console.log(todoJSON);
 ---
 
 ## LOOPS
-// FOR
-for (let i = 0; i < 5; i++) {
-    console.log(i);
-}
-// WHILE
-let i = 0;
-while (i < 5) {
-    console.log(i);
-    i++;
-}
+// FOR<br/>
+for (let i = 0; i < 5; i++) {<br/>
+    console.log(i);<br/>
+}<br/>
+// WHILE<br/>
+let i = 0;<br/>
+while (i < 5) {<br/>
+    console.log(i);<br/>
+    i++;<br/>
+}<br/>
 // SIMILARLY, DO-WHILE LOOP
 
-// LOOPING THROUGH TODOS ARRAY
-for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i].text);
-}
-// OR || BEST WAY TO WRITE
-//       i     arrayName
-for (let todo of todos) {      //for(auto i: arr)
-    console.log(todo.id);      // cout<<i;    kind of this
+// LOOPING THROUGH TODOS ARRAY<br/>
+for (let i = 0; i < todos.length; i++) {<br/>
+    console.log(todos[i].text);<br/>
+}<br/>
+// OR || BEST WAY TO WRITE<br/>
+//       i     arrayName<br/>
+for (let todo of todos) {      //for(auto i: arr)<br/>
+    console.log(todo.id);      // cout<<i;    kind of this <br/>
 }
 
 ---
@@ -199,58 +198,58 @@ for (let todo of todos) {      //for(auto i: arr)
 ## HIGH ORDER ARRAY METHODS  -- Suggest to do any kind of iteration
 
 #### 1. foreach(): just loops through them
-// array.forEach( function(variable) ){}
-todos.forEach(function (todo) {
-    console.log(todo.text);
+// array.forEach( function(variable) ){}<br/>
+todos.forEach(function (todo) {<br/>
+    console.log(todo.text);<br/>
 });
 
 #### 2. map(): allow us to create a new array from an array
-const todoText = todos.map(function (todo) {
-    // we want to return values to new array
-    return todo.text;
-});
-// todoText is the new array
+const todoText = todos.map(function (todo) {<br/>
+    // we want to return values to new array<br/>
+    return todo.text;<br/>
+});<br/>
+// todoText is the new array<br/>
 console.log(todoText);
 
 #### 3. filter(): allow us to create a new array based on a condition
-const todoComplteted = todos.filter(function (todo) {
-    // we want to return values to new array
-    return todo.isCompleted == true;
-});
-// todoComplteted is the new array
+const todoComplteted = todos.filter(function (todo) {<br/>
+    // we want to return values to new array<br/>
+    return todo.isCompleted == true;<br/>
+});<br/>
+// todoComplteted is the new array<br/>
 console.log(todoComplteted);
 
 #### EX: IF WE WANT COMPLETED TODOS AND GET ONLY TEXT
-const todoCompltetedText = todos.filter(function (todo) {
-    // we want to return values to new array
-    return todo.isCompleted == true;
-}).map(function (todo) {
-    return todo.text;
-});
-// todoComplteted is the new array
+const todoCompltetedText = todos.filter(function (todo) {<br/>
+    // we want to return values to new array<br/>
+    return todo.isCompleted == true;<br/>
+}).map(function (todo) {<br/>
+    return todo.text;<br/>
+});<br/>
+// todoComplteted is the new array<br/>
 console.log(todoCompltetedText);
 
 ---
 
 ## CONDITIONALS
-const a = "10";
-const a1 = 10;
+const a = "10";<br/>
+const a1 = 10;<br/>
 const a2 = 20;
 
-// == : compares only values, for a: equal
-// === : compare values and datatypes, for a: not equal
-if (a1 === 10) {
-    console.log("Equal");
-}
-else {
-    console.log("NOT Equal");
+// == : compares only values, for a: equal<br/>
+// === : compare values and datatypes, for a: not equal<br/>
+if (a1 === 10) {<br/>
+    console.log("Equal");<br/>
+}<br/>
+else {<br/>
+    console.log("NOT Equal");<br/>
 }
 
 ---
 
 ## TERTIARY OPEARTOR
-const j = 11;
-const color = j > 10 ? "red" : "blue";
+const j = 11;<br/>
+const color = j > 10 ? "red" : "blue";<br/>
 console.log(color);
 
 // SIMILARLY, SWITCH CASE SAME AS IN C++
@@ -258,111 +257,110 @@ console.log(color);
 ---
 
 ## FUNCTIONS
-function add(num1 = 2, num2 = 5) {
-    console.log(num1 + num2);
+function add(num1 = 2, num2 = 5) {<br/>
+    console.log(num1 + num2);<br/>
 }
 
-function addnum(num1 = 2, num2 = 5) {
-    return (num1 + num2);
+function addnum(num1 = 2, num2 = 5) {<br/>
+    return (num1 + num2);<br/>
 }
 
- add(8, 9);
-let ans = addnum(7, 5);
+ add(8, 9);<br/>
+let ans = addnum(7, 5);<br/>
 console.log(ans);
 
 ---
 
 ## ARROW FUNCTION
-/* Arrow functions allow us to write shorter function syntax.
-Note: This works only if the function has only one statement.
+/* Arrow functions allow us to write shorter function syntax.<br/>
+Note: This works only if the function has only one statement.<br/>
 */
 
 const add = (num1 = 2, num2 = 5) => console.log(num1 + num2);
 
 add(6, 4);
 
-const addnum = (num1 = 2, num2 = 5) => num1 + num2;
-// No need to write return
+const addnum = (num1 = 2, num2 = 5) => num1 + num2;<br/>
+// No need to write return<br/>
 console.log(addnum(5, 3));
 
 ---
 
 ## Object-oriented programming OOP
-// Constructor Function
-function Person(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    // this.dob = dob;
+// Constructor Function<br/>
+function Person(firstName, lastName, dob) {<br/>
+    this.firstName = firstName;<br/>
+    this.lastName = lastName;<br/>
+    // this.dob = dob;<br/>
     this.dob = new Date(dob);
-
     
-    // this.getbirthYear = function () {
-    //     return this.dob.getFullYear();
-    // }
-    // this.fullName = function () {
-    //     return `${this.firstName} ${this.lastName}`;
+
+    // this.getbirthYear = function () { <br/>
+    //     return this.dob.getFullYear(); <br/>
+    // }<br/>
+    // this.fullName = function () {<br/>
+    //     return `${this.firstName} ${this.lastName}`;<br/>
     // }
     
 }
 #### Instantiate Object
-const person1 = new Person("Jayant", "Baid", "10-11-2002");
-// Here date is string, so we, can make it actual date
+const person1 = new Person("Jayant", "Baid", "10-11-2002");<br/>
+// Here date is string, so we, can make it actual date<br/>
 const person2 = new Person("Himanshu", "Goyal", "06-24-2002");
 
 #### Prototype Use
-Person.prototype.getbirthYear = function () {
+Person.prototype.getbirthYear = function () {<br/>
     return this.dob.getFullYear();
 }
 
 Person.prototype.fullName = function () {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName} ${this.lastName}`;<br/>
 }
 
 console.log(person1);  //we also get that this is a function and we, don't want thst, for that, we use prototype -- First Remove function from function person
 
-
-
-console.log(person1.dob);
+console.log(person1.dob);<br/>
 console.log(person2.dob.getFullYear());
 
-console.log(person1.getbirthYear());
+console.log(person1.getbirthYear());<br/>
 console.log(person1.fullName());
 
 ---
 
 ## CLASSES
-// Similar to the above OOPS Constructor Function & Similar to classes in C++
-class Person {
-    constructor(firstName, lastName, dob) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        // this.dob = dob;
-        this.dob = new Date(dob);
+// Similar to the above OOPS Constructor Function & Similar to classes in C++<br/>
+class Person {<br/>
+    constructor(firstName, lastName, dob) {<br/>
+        this.firstName = firstName;<br/>
+        this.lastName = lastName;<br/>
+        // this.dob = dob;<br/>
+        this.dob = new Date(dob);<br/>
     }
+
     getbirthYear() {
-        return this.dob.getFullYear();
-    }
-    fullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
+        return this.dob.getFullYear();<br/>
+    }<br/>
+    fullName() {<br/>
+        return `${this.firstName} ${this.lastName}`;<br/>
+    }<br/>
 };
 
 #### Instantiate Object
-const person1 = new Person("Jayant", "Baid", "10-11-2002");
-// Here date is string, so we, can make it actual date
+const person1 = new Person("Jayant", "Baid", "10-11-2002");<br/>
+// Here date is string, so we, can make it actual date<br/>
 const person2 = new Person("Himanshu", "Goyal", "06-24-2002");
 
 console.log(person1);
 
-console.log(person1.dob);
+console.log(person1.dob);<br/>
 console.log(person2.dob.getFullYear());
 
-console.log(person1.getbirthYear());
-console.log(person1.fullName());
-console.log(person1.dob);
+console.log(person1.getbirthYear());<br/>
+console.log(person1.fullName());<br/>
+console.log(person1.dob);<br/>
 console.log(person2.dob.getFullYear());
 
-console.log(person1.getbirthYear());
+console.log(person1.getbirthYear());<br/>
 console.log(person1.fullName());
 
 ---
