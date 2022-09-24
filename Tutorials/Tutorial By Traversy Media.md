@@ -208,6 +208,7 @@ const todoText = todos.map(function (todo) {<br/>
     // we want to return values to new array<br/>
     return todo.text;<br/>
 });<br/>
+
 // todoText is the new array<br/>
 console.log(todoText);
 
@@ -216,6 +217,7 @@ const todoComplteted = todos.filter(function (todo) {<br/>
     // we want to return values to new array<br/>
     return todo.isCompleted == true;<br/>
 });<br/>
+
 // todoComplteted is the new array<br/>
 console.log(todoComplteted);
 
@@ -292,9 +294,7 @@ function Person(firstName, lastName, dob) {<br/>
     this.firstName = firstName;<br/>
     this.lastName = lastName;<br/>
     // this.dob = dob;<br/>
-    this.dob = new Date(dob);
-    
-
+    this.dob = new Date(dob);<br/>
     // this.getbirthYear = function () { <br/>
     //     return this.dob.getFullYear(); <br/>
     // }<br/>
@@ -335,9 +335,8 @@ class Person {<br/>
         this.lastName = lastName;<br/>
         // this.dob = dob;<br/>
         this.dob = new Date(dob);<br/>
-    }
-
-    getbirthYear() {
+    }<br/>
+    getbirthYear() {<br/>
         return this.dob.getFullYear();<br/>
     }<br/>
     fullName() {<br/>
