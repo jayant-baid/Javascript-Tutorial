@@ -363,3 +363,85 @@ console.log(person1.getbirthYear());<br/>
 console.log(person1.fullName());
 
 ---
+
+
+## ELEMENT SELECTORS
+
+#### Single Element Selectors
+console.log(document.getElementById('my-form'));<br/>
+console.log(document.querySelector('.container'));
+#### Multiple Element Selectors
+console.log(document.querySelectorAll('.item'));<br/>
+console.log(document.getElementsByTagName('li'));<br/>
+console.log(document.getElementsByClassName('item'));
+
+const items = document.querySelectorAll('.item');<br/>
+items.forEach((item) => console.log(item));
+
+## MANIPULATING THE DOM
+const ul = document.querySelector('.items');<br/>
+// ul.remove();<br/>
+// ul.lastElementChild.remove();<br/>
+ul.firstElementChild.textContent = 'Hello';<br/>
+ul.children[1].innerText = 'Brad';<br/>
+ul.lastElementChild.innerHTML = `<h1>Hello</h1>`; <br/>
+
+const btn = document.querySelector('.btn');<br/>
+// btn.style.background = 'red';
+
+---
+
+## EVENTS
+
+### Mouse Event
+btn.addEventListener('click', e => {<br/>
+  e.preventDefault();<br/>
+  console.log(e.target.className);<br/>
+  document.getElementById('my-form').style.background = '#ccc';<br/>
+  document.querySelector('body').classList.add('bg-dark');<br/>
+  ul.lastElementChild.innerHTML = `<h1>Changed</h1>`;<br/>
+});
+
+### Keyboard Event
+const nameInput = document.querySelector('#name');<br/>
+nameInput.addEventListener('input', e => {<br/>
+  document.querySelector('.container').append(nameInput.value);<br/>
+});
+
+### USER FORM SCRIPT
+
+#### Put DOM elements into variables
+const myForm = document.querySelector('#my-form');<br/>
+const nameInput = document.querySelector('#name');<br/>
+const emailInput = document.querySelector('#email');<br/>
+const msg = document.querySelector('.msg');<br/>
+const userList = document.querySelector('#users');
+
+#### Listen for form submit
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {<br/>
+  e.preventDefault();<br/>
+  
+  if(nameInput.value === '' || emailInput.value === '') {<br/>
+    // alert('Please enter all fields');<br/>
+    msg.classList.add('error');<br/>
+    msg.innerHTML = 'Please enter all fields';<br/><br/>
+    // Remove error after 3 seconds<br/>
+    setTimeout(() => msg.remove(), 3000);<br/>
+  } else {<br/>
+    // Create new list item with user<br/>
+    const li = document.createElement('li');<br/><br/>
+    // Add text node with input values<br/>
+    li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));<br/><br/>
+    // Add HTML<br/>
+    // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;<br/><br/>
+    // Append to ul<br/>
+    userList.appendChild(li);<br/><br/>
+    // Clear fields<br/>
+    nameInput.value = '';<br/>
+    emailInput.value = '';<br/>
+  }<br/>
+}
+
+---
