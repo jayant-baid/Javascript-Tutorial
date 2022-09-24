@@ -402,7 +402,7 @@ const ul = document.querySelector('.items');<br>
 ul.firstElementChild.textContent = 'Hello';<br>
 ul.children[1].innerText = 'Brad';<br>  
 //Index=1 for second child
-ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; <br>
+ul.lastElementChild.innerHTML = "<h1>Hello</h1>"; //<h1>...  <br>
 //last child me hume html me changes karne h and woh changes h to print Hello in h1 size.
 IF WE WANT TO ADD HTML DYNAMICALLY, WE CAN DO IT WITH innerHTML
 
